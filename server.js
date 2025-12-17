@@ -12,6 +12,8 @@ app.use(express.json());
 
 app.use("/", contactRoutes );
 
-mongoose.connect(process.env.MONGO_URL);
+mongoose.connect(process.env.MONGO_URL, {
+    
+});
 
 app.listen(3000);
