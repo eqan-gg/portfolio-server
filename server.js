@@ -13,6 +13,10 @@ app.use(express.json());
 
 app.use("/", contactRoutes );
 
+app.get("/", (req, res) => {
+    res.send("Hello World!");
+});
+
 mongoose.connect(process.env.MONGO_URL, {
     
 });
