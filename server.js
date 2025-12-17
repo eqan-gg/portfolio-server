@@ -7,14 +7,14 @@ dotenv.config();
 
 
 const app = express();
-app.use(cors({ origin: "https://eqan-dev.vercel.app/" }));
+app.use(cors({ origin: "https://eqan-dev.vercel.app" }));
 app.use(express.json());
 
 
 app.use("/", contactRoutes );
 
 app.get("/", (req, res) => {
-    res.send("Hello World!");
+    res.send("server running");
 });
 
 mongoose.connect(process.env.MONGO_URL, {
